@@ -1,0 +1,41 @@
+pwd = current directory
+ls -all = list everything
+mkdir = make directory/folder
+cd = change destination
+git init name = initialize a git repo
+git init . = initialize the current folder as the git repo
+cd name/ = go into the master branch of the repo "name"
+ls -al = see all the files and folders part of this repo
+git status (from within the master) = check what has not been committed yet
+mate selection_sort.cc = create a file
+git add filename.extension filename.extension = move to staging area
+git add . = add everything not committed yet
+git commit -m "message here" = commit the files in the staging area
+git commit = opens a text to add the commit message, save and close
+cd .. = back up
+rm -rf .git = forcefully, recursively delete the history. No longer a git repo
+git log = show commits, see the commit ids (SHA-1 identifier), authors, dates, commit messages
+git show = the last commit and the changes that commit made (q to quit)
+rm file.name = delete file
+git commit -a = add modified files to the stage and then commit
+git commit -am = same as above, with commit message
+git ls files = what files are being tracked
+touch new.file = add a new file
+git reset HEAD file.name = resets stages (doesn't discard changes)
+git checkout -- file.name = resets back to the last committed version
+git config --global alias.hist "log --oneline --graph --decorate --all" = git alias setting a word "hist" to the quotes (use it with "git hist")
+git hist = uses the alias we created
+
+
+Local Git States
+	Working Directory
+		all the files and folders for your application
+		which may or may not be managed by Git
+	Staging
+		used to prepare for the next commit
+	Repository (.git folder)
+		all the commit history
+Remote State
+		when the commits are shared with the online repo
+
+
