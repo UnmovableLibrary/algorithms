@@ -20,13 +20,35 @@ rm file.name = delete file
 git commit -a = add modified files to the stage and then commit
 git commit -am = same as above, with commit message
 git ls files = what files are being tracked
-touch new.file = add a new file
+touch new.file = add a new file or update a file
 git reset HEAD file.name = resets stages (doesn't discard changes)
 git checkout -- file.name = resets back to the last committed version
 git config --global alias.hist "log --oneline --graph --decorate --all" = git alias setting a word "hist" to the quotes (use it with "git hist")
 git hist = uses the alias we created
+git mv example.txt demo.txt = renames a file (then commit it)
+git add -u = update, good for deletions
+git add -A = to include additions and deletions in one add
+mate .gitignore = say what to ignore (ex: *.log     one per line)
+git remote -v = displays any github connections
+got remote add origin <link>.git = link it to the github
+git push -u origin master = push what you have
 
 
+GitHub
+	click add new repository on github.com
+SSH setup
+	pwd
+	ls .ssh 
+	mkdir .ssh 
+	cd .ssh
+	ssh-keygen -t rsa -C "email@.com"
+	ls -al
+		//.pub is public key
+	mate id_rsa.pub
+		//copy it all and paste it to github under settings
+	ssh -T git@github.com
+		//from now on select SSH clone URL to setup a repo locally from github
+	
 Local Git States
 	Working Directory
 		all the files and folders for your application
